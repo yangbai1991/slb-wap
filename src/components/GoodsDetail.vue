@@ -41,10 +41,24 @@
       <van-goods-action-big-btn>
         加入购物车
       </van-goods-action-big-btn>
-      <van-goods-action-big-btn primary>
+      <van-goods-action-big-btn primary @click="showBase=true">
         立即购买
       </van-goods-action-big-btn>
     </van-goods-action>
+
+    <van-sku
+      v-model="showBase"
+      :sku="sku"
+      :goods="goods"
+      :goodsId="goodsId"
+      :hideStock="sku.hide_stock"
+      :quota="quota"
+      :quotaUsed="quotaUsed"
+      :resetStepperOnHide="resetStepperOnHide"
+      :disableStepperInput="disableStepperInput"
+      @buy-clicked="handleBuyClicked"
+      @add-cart="handleAddCartClicked"
+    />
   </div>
 </template>
 
@@ -76,6 +90,24 @@ export default {
   },
   data () {
     return {
+      showBase: false,
+      sku: {
+        tree: [
+          {
+            k: '颜色',
+            v: [{
+              id: '30349', // skuValueId：规格值id
+              name: '红色', // skuValueName：规格值名称
+              imgUrl: 'https://mg.yzcdn.cn/upload_files/2017/02/21/FjKTOxjVgnUuPmHJRdunvYky9OHP.jpg'
+            },
+            {
+              id: '1215',
+              name: '蓝色',
+              imgUrl: 'https://img.yzcdn.cn/upload_files/2017/03/16/Fs_OMbSFPa183sBwvG_94llUYiLa.jpeg'
+            }]
+          }
+        ]
+      },
       goods: {
         title: '美国伽力果（约680g/3个）',
         price: 2680,
@@ -85,7 +117,14 @@ export default {
           'https://img.yzcdn.cn/public_files/2017/10/24/e5a5a02309a41f9f5def56684808d9ae.jpeg',
           'https://img.yzcdn.cn/public_files/2017/10/24/1791ba14088f9c2be8c610d0a6cc0f93.jpeg'
         ]
-      }
+      },
+      goodsId: 0,
+      quota: 0,
+      quotaUsed: 0,
+      resetStepperOnHide: false,
+      disableStepperInput: false,
+      handleBuyClicked: () => {},
+      handleAddCartClicked: () => {}
     };
   },
   methods: {
