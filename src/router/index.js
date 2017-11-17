@@ -2,17 +2,30 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
-import HelloWorld from '@/components/HelloWorld';
+import GoodsDetail from '@/components/GoodsDetail';
+import ShoppingCart from '@/components/ShoppingCart';
+import UserCenter from '@/components/UserCenter';
 
 Vue.use(Router);
 Vue.use(Vant);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'GoodsDetail',
+      component: GoodsDetail
+    },
+    {
+      path: '/cart',
+      name: 'ShoppingCart',
+      component: ShoppingCart
+    },
+    {
+      path: '/usercenter',
+      name: 'UserCenter',
+      component: UserCenter
     }
   ]
 });

@@ -35,7 +35,7 @@
       <van-goods-action-mini-btn icon="chat">
         客服
       </van-goods-action-mini-btn>
-      <van-goods-action-mini-btn icon="cart">
+      <van-goods-action-mini-btn icon="cart" @click="toCart">
         购物车
       </van-goods-action-mini-btn>
       <van-goods-action-big-btn>
@@ -91,7 +91,15 @@ export default {
   methods: {
     formatPrice () {
       return '¥' + (this.goods.price / 100).toFixed(2);
+    },
+    toCart () {
+      this.$router.push({ name: 'ShoppingCart' });
     }
+  },
+  mounted: function () {
+    this.$nextTick(() => {
+      // this.$router.push({ name: 'ShoppingCart' });
+    });
   }
 };
 </script>
