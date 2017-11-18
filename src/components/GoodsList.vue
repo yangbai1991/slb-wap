@@ -54,6 +54,11 @@
     <div class="btn-area">
       <van-button size="large">进店逛逛</van-button>
     </div>
+    <van-tabbar v-model="active" @change="toDetail">
+      <van-tabbar-item icon="shop">首页</van-tabbar-item>
+      <van-tabbar-item icon="records">订单</van-tabbar-item>
+      <van-tabbar-item icon="home" change="toDetail">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
   
@@ -62,15 +67,34 @@
     name: 'GoodsList',
     data () {
       return {
+        active: 0,
         value: ''
       };
     },
     methods: {
+      change () {
+        alert();
+      },
+      toDetail (index) {
+        let name = 'GoodsList';
+        switch (index) {
+          case 0:
+            name = 'GoodsList';
+            break;
+          case 1:
+            name = 'GoodsList';
+            break;
+          case 2:
+            name = 'UserCenter';
+            break;
+        }
+        this.$router.push({ name });
+      }
     }
   };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
   .goods-list-wrap {
     background: #f8f8f8;
     padding-top: 42px;
