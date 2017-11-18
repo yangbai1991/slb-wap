@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="test"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="1" time="11.23" timestamp="Sat, 18 Nov 2017 08:32:32 GMT">
+  
+    <testcase name="default e2e tests" classname="test" time="11.23" assertions="2">
+
+      <failure message="Testing if element &lt;.hello&gt; is present.">    at Object.default e2e tests (/Users/yangbai/code/workspace/slb-wap/test/e2e/specs/test.js:14:15)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
