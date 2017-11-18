@@ -1249,9 +1249,9 @@ chokidar@^1.4.1, chokidar@^1.6.0, chokidar@^1.7.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chromedriver@^2.27.2:
+chromedriver@^2.33.2:
   version "2.33.2"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-2.33.2.tgz#8fc779d54b6e45bef55d264a1eceed52427a9b49"
+  resolved "http://registry.npm.taobao.org/chromedriver/download/chromedriver-2.33.2.tgz#8fc779d54b6e45bef55d264a1eceed52427a9b49"
   dependencies:
     del "^3.0.0"
     extract-zip "^1.6.5"
@@ -6658,9 +6658,9 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
-vant@^0.10.9:
-  version "0.10.9"
-  resolved "https://registry.yarnpkg.com/vant/-/vant-0.10.9.tgz#5605b61474d676182e729cc75b1e1f623a6802e8"
+vant@^0.11.0:
+  version "0.11.0"
+  resolved "http://registry.npm.taobao.org/vant/download/vant-0.11.0.tgz#3ad995961060c0075937776adbbc4e3b3d366433"
   dependencies:
     babel-runtime "6.x"
     vue-lazyload "^1.1.4"

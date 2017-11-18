@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
-  html {
-    font-size: 42.6667px;
-  }
+  // html {
+  //   font-size: 42.6667px !important;;
+  // }
 </style>
