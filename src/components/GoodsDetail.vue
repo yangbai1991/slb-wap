@@ -151,7 +151,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
   .goods {
     padding-bottom: 50px;
     &-swipe {

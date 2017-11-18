@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
+import GoodsList from '@/components/GoodsList';
 import GoodsDetail from '@/components/GoodsDetail';
 import ShoppingCart from '@/components/ShoppingCart';
 import UserCenter from '@/components/UserCenter';
@@ -14,6 +15,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'GoodsList',
+      component: GoodsList
+    },
+    {
+      path: '/detail',
       name: 'GoodsDetail',
       component: GoodsDetail
     },
